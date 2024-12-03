@@ -5,12 +5,11 @@ param (
     $InputFile = ".\input.txt"
 )
 
-$ErrorActionPreference = "Stop"
 $ReactorData = (Get-Content $InputFile)
 $GoodData = 0
 $TolerableData = 0
 
-function Test-ForBadReadings ($Line, [Switch]$Dampen) {
+function Test-ForBadReadings ($Line) {
     $Direction = ($Line[1] - $Line[0])
 
     for($i = 1; $i -lt $Line.Count; $i++){
