@@ -31,7 +31,7 @@ foreach($Line in $PageInstructions){
     }
 }
 
-$OrderedRules = ($Rules | Sort-Object Before | Group Before -AsHashTable)
+$OrderedRules = ($PageRules | Sort-Object Before | Group Before -AsHashTable)
 
 function Test-Valid ($OrderedRules, $Page){
     foreach($Number in $Page){
@@ -51,7 +51,6 @@ function Test-Valid ($OrderedRules, $Page){
 
     return $true
 }
-
 
 foreach($Update in $PageOrders){
     $IsValid = (Test-Valid $OrderedRules $Update)
