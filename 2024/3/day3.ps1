@@ -30,5 +30,5 @@ foreach($Operation in $Part2Base){
 }
 
 
-write-host (Get-Total $InstructionSet)
-write-host $Part2Total
+write-host "Part 1: $(Get-Total $InstructionSet)"
+write-host "Part 2: $Part2Total"
