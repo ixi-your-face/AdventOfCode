@@ -121,5 +121,3 @@ do{
 $NumberOfBreadCrumbs = [Regex]::Matches($PatrolMap, "X")
 
 Write-Host "Part 1: $($NumberOfBreadCrumbs.Count)"
-
-#Regex: [V^><](.*)#
